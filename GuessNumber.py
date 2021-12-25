@@ -1,5 +1,6 @@
 import random
 
+#human guess
 def guessNumber(upperLimit):
 	theNumber = random.randint(1, upperLimit)
 	guess = 0
