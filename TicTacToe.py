@@ -60,4 +60,27 @@ def play(game, xPlayer, oPlayer, printGame = True):
 		game.printBoardIndex()
 	player = "x"
 	while game.hasEmptyIndex():
-		pass
+		if player == "o":
+			index = oPlayer.getMove(game)
+		else:
+			index = xPlayer.getMove(game)
+		if game.makeMove(index, player):
+			if printGame:
+				print(player, "made a move to position {}.".format(index))
+				game.printBoard()
+		if game.winner:
+			if printGame:
+				print(player, "won!")
+			return player
+		player = "o" if player == "x" else "o"
+	time.sleep(0.5)
+	if printGame:
+		print("Tie!")
+
+if __name__ == "__main__":
+	xPlayer = HumanPlayer("x")
+	oPlayer = ComputerPlayer("o")
+	ticTacToe = TicTacToe()
+	play(ticTacToe, xPlayer, oPlayer, True)
+
+
