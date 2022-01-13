@@ -3,7 +3,7 @@ import random
 class Player():
 	#symbol is x or o
 	def __init__(self, symbol):
-		self.letter = symbol
+		self.symbol = symbol
 	def getMove(self, game):
 		pass
 
@@ -14,12 +14,12 @@ class HumanPlayer(Player):
 		validIdx = False
 		idx = None
 		while not validIdx:
-			in = input(self.symbol + "\'s turn. Please enter move (0 ~ 9): ")
+			index = input(self.symbol + "\'s turn. Please enter move (0 ~ 9): ")
 			try: 
-				idx = int(in)
+				idx = int(index)
 				if idx not in game.emptyIndex():
 					raise ValueError
-				validIdx = true
+				validIdx = True
 			except ValueError:
 				print("Please enter valid move. Try again.")
 		return idx 

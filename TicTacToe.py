@@ -72,7 +72,10 @@ def play(game, xPlayer, oPlayer, printGame = True):
 			if printGame:
 				print(player, "won!")
 			return player
-		player = "o" if player == "x" else "o"
+		print(player)
+		print(player == "x")
+		player = "o" if player == "x" else "x"
+		print(player)
 	time.sleep(0.5)
 	if printGame:
 		print("Tie!")
