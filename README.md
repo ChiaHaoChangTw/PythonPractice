@@ -6,3 +6,4 @@ This repository contains my python practice codes.
 * Hangman
 * Rock Paper Scissors
 * Tic Tac Toe
+* Minesweeper (in progress...)
