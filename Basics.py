@@ -28,6 +28,19 @@ def forLoop():
 	#enumerate
 	for i, v in enumerate(['tic', 'tac', 'toe']):
 		print(i, v)
+	print()
+
+#* and ** before function arguments
+def shop(kind, *arguments, **keywords):
+	print("-- Do you have any", kind, "?")
+	print("-- I'm sorry, we're all out of", kind)
+	for arg in arguments:
+        	print(arg)
+	print("-" * 40)
+	for kw in keywords:
+		print(kw, ":", keywords)
 
 if __name__ == "__main__":
 	forLoop()
+	shop("Limburger","It's very runny, sir.", "It's really very, VERY runny, sir.",
+		shopkeeper="Michael Palin", client="John Cleese", sketch="Cheese Shop Sketch")
