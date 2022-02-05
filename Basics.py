@@ -7,13 +7,13 @@ def forLoop():
 			activeUsers[user] = status
 	for status in activeUsers.values():
 		print(status, end = ',')
-	print()
+	print('\n')
 	
 	#loop a sequence
 	list = ['a','b','c','d']
 	for i in range(len(list)):
 		print(i, list[i], end = ',')
-	print()
+	print('\n')
 
 	#for-else loop
 	for n in range(2, 10):
@@ -23,6 +23,11 @@ def forLoop():
 				break
 		else:
 			print(n, 'is a prime number')	
+	print()
+
+	#enumerate
+	for i, v in enumerate(['tic', 'tac', 'toe']):
+		print(i, v)
 
 if __name__ == "__main__":
 	forLoop()
